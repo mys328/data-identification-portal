@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+body a{outline:none;blr:expression(this.onFocus=this.blur()); -moz-outline-style: none;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul,li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+abbr,acronym{border:0}
+body,button,input,select,textarea{font-family:"Microsoft Yahei"; }
+
+.warp_moban{ min-width:800px; max-width: 900px; height:auto; overflow:hidden; margin:0 auto; background:#fff; padding:20px 10px 40px;}
+h1.moban_title{ text-align:center; line-height:58px; font-size: 24px; }
+
+.moban_table{ border-bottom:1px solid #ff0000; height:auto; overflow:hidden; margin-bottom:20px;}
+.div_td{ padding:8px 0px; height:auto; overflow:hidden; }
+.div_td_line{ border-top:1px solid #ff0000;}
+.p0{ padding:0px;}
+.div_td table tr td{ line-height:30px;}
+td.td_left{ text-align:left;} 
+td.td_right{ text-align:right;}
+td input{ border:0px solid #f1f1f1; outline:none; background:#ffffee; }
+td input:active{  outline:none;} 
+input.input_year{ width:60px; height:20px; line-height:20px; /*border-bottom:0px solid #ccc;*/}
+input.input_month{ width:30px; height:20px; line-height:20px;/* border-bottom:0px solid #ccc;*/}
+input.input_day{ width:30px; height:20px; line-height:20px; /*border-bottom:0px solid #ccc;*/}
+.div_td table input[type=text]{  border:0px solid #ccc; height:20px; line-height:20px;}
+.zf_table table input[type=text]{  border:0px solid #ccc;}
+.div_td textarea{ border:0px solid #f1f1f1; background:#ffffee;}
+.div_td textarea:active{ outline:none;} 
+input,textarea {outline:none; border:0px; }
+textarea{ resize:none;}
+input[type=radio]{ position:relative; top:2px;}
+
+.qz{ width:49.9%; float:left; height: 410px; padding:8px 0px;}
+.qz dl dt{ font-size:14px; padding:5px 0px;}
+.qz_right{ border-left:1px solid #ff0000; }
+.qz_right dl{ padding-left:10px;}
+dl.h_01{ height:140px;}
+dl.h_02{ height:70px;}
+dl.h_03{ height:35px;}
+
+.td_left span{ float:left; line-height: 24px; margin-right: 10px; height: 20px;}
+.zf_table table{ border-top:1px solid #ccc; border-left:1px solid #ccc; font-size:12px;}
+.zf_table table tr td{ border-bottom:1px solid #ccc; border-right:1px solid #ccc; line-height:24px; padding:5px 5px;}
+td.td_c{ text-align:center;}
+
+p.td_r{ text-align:right;}
+
+.red{ color:#ff0000;}
+.green{ color:#13a30a;}
+.bgt_table table{ border-top:1px solid #13a30a; border-left:1px solid #13a30a; font-size:12px;}
+.bgt_table table tr td{ border-bottom:1px solid #13a30a; font-size:14px; border-right:1px solid #13a30a; line-height:19px; padding:5px 5px;}
+td.ld_more p{ border-bottom:1px solid #f2f2f2; padding:2px 2px;}
+
+.text_date{ line-height:30px; height:30px; padding:0px 0px 5px; text-align:left;}
+
+.div_td textarea:disabled{ background:#fff!important;}
+.div_td input:disabled{ background:#fff!important;}
+ textarea:focus{ box-shadow: none;}
+.zf_table tr td input:focus{ box-shadow: none;}
+.div_td tr td input:focus{ box-shadow: none;}
+
+

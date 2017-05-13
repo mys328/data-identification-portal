@@ -1,0 +1,158 @@
+<!--当期页面自定义样式-->
+<style>
+    /*    body {
+            margin: 2rem;
+        }*/
+    svg {
+        background-color: #FFF;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    svg:not(.active):not(.ctrl) {
+        cursor: crosshair;
+    }
+
+    path.link {
+        stroke: grey;
+        stroke-width: 2px;
+        cursor: default;
+    }
+
+    svg:not(.active):not(.ctrl) path.link {
+        cursor: pointer;
+    }
+
+    path.link.selected {
+        stroke-dasharray: 10, 2;
+    }
+
+    path.link.dragline {
+        pointer-events: none;
+    }
+
+    path.link.hidden {
+        stroke-width: 0;
+    }
+
+    path.dashlink {
+        stroke: black;
+        stroke-width: 4px;
+        stroke-dasharray: 10, 2;
+        cursor: default;
+    }
+
+    path.dashlink.hidden {
+        stroke-width: 0;
+    }
+
+    circle.node {
+        stroke-width: 1.5px;
+        cursor: pointer;
+    }
+
+    circle.node.reflexive {
+        stroke: #000 !important;
+        stroke-width: 2.5px;
+    }
+
+    text {
+        font: 12px sans-serif;
+        pointer-events: none;
+    }
+
+    text.id {
+        text-anchor: middle;
+        font-weight: bold;
+    }
+
+    .gridStyle {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ngViewport {
+        /*height: auto !important*/
+        min-height: 30rem;
+    }
+
+    .btn-pop .dropdown-menu {
+        top: inherit;
+        left: inherit;
+        max-width: 626px;
+        padding: 0px;
+        background-color: inherit;
+        border: none;
+    }
+
+    .btn-oper-02 ul {
+        float: right;
+        width: 110px;
+        margin-bottom: 0px;
+        margin-left: -1px;
+    }
+
+    .btn-oper-02 a {
+        float: right;
+        width: 130px;
+        padding: 7px 0px;
+        margin-top: -1px;
+        margin-left: -1px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+</style>
+<!--页面主体-->
+<body>
+<div class="zt_warp wrap1000">
+    <div class="zt-top">
+        <div class="zt-toolbar">
+            <div class="toolbar">
+                <button class="btn btn-default" ng-click="cleanData()"><i class="fa fa-trash-o"></i> 清 空</button>
+                <button class="btn btn-default" ng-click="search()"><i class="fa fa-search"></i> 查 询</button>
+                <a href="?module=billDemo&controller=addDemo&action=addDemo" class="btn btn-default"><i
+                        class="fa fa-plus"></i> 新 增</a>
+                <a href="?module=billDemo&controller=editDemo&action=editDemo" class="btn btn-default"><i
+                        class="fa fa-times"></i> 修 改</a>
+            </div>
+        </div>
+    </div>
+    <div class="zt-search">
+        <div class="ser_tit">
+            <div class="title">查询条件</div>
+            <div slide-toggle-new ref-el="#projectSearchForm"
+                 style="float: right; padding-right: 20px; margin-right: 10px;
+                        position:absolute; right:-16px; top:-16px; width:57px; padding:5px 15px 5px 8px;">
+            </div>
+        </div>
+    </div>
+
+    <!--搜索区域代码-->
+    <div id="projectSearchForm" class="ser_bolck" style="display: none;">
+        <ul class="ser_ul">
+            <!--查询条件区域-->
+        </ul>
+    </div>
+    <!--搜索区域结束-->
+
+    <div id="projectListDetail" class="gridStyle" ng-grid="gridOptions"></div>
+
+    <div class="tb_footer">
+        <div page-plugin
+             total-page="chageContractItem.totalPage"
+             total-count="chageContractItem.totalCount"
+             page-size="pb.pageSize"
+             current-page="pb.currentPage"
+             current-page-size="chageContractItem.data.length"
+             on-select-page="switchPage(currentPage, pageSize)">
+        </div>
+    </div>
+
+    <div loading-animation visible="view.showMask" ref-id="#projectListDetail"></div>
+</div>
+</body>

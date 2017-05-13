@@ -1,0 +1,142 @@
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title ng-bind-html="site_title"></title>
+    <!--根据项目上下文自行作调整-->
+    <!--<base href="/fss/"/>-->
+    <!--end build-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="keywords" content="">
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <!--begin build-->
+    <link rel="stylesheet" type="text/css" href="static/widget/bootstrap/dist/css/bootstrap.min.css"/>
+    <!--end build-->
+
+    <!--begin build 通用样式-->
+    <link rel="stylesheet" type="text/css" href="static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/ng-grid.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/project.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/common.table.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/ng-table.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/z.bill.table.css"/>
+    <!--end build-->
+
+    <link rel="stylesheet" type="text/css"
+          href="js/fileupload/attachment/showLoading.css">
+
+    <!--begin build-->
+    <script src="static/js/lib/common/jquery.min.js"></script>
+    <!--end build-->
+
+    <script>
+        /*全局配置属性*/
+        var G = {
+            api_host: 'localhost:8080',
+            path: {
+                root: './',
+                mod: './src/module',
+                view: './static/view',
+                img: './static/images'
+            },
+            site: {name: ''},//全局用户信息
+            site_name: '',//默认标题
+            load_version: 'build-0.0.2'
+        }, F = {}, M = {};
+    </script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular/angular-route.min.js"></script>
+    <!--<script src="static/js/lib/common/angular.min.js"></script>
+    <script src="static/js/lib/common/angular-route.min.js"></script>-->
+    <script src="static/js/lib/common/angular-sanitize.min.js"></script>
+    <!--<script src="static/js/lib/common/ng-grid.js"></script>-->
+    <script src="static/js/mhp.js"></script>
+    <script src="static/js/html5.js"></script>
+    <script src="static/js/lib/common/ng-infinite-scroll.min.js"></script>
+    <script src="static/js/lib/common/swiper.min.js"></script>
+    <script src="static/js/lib/common/angular-swiper.js"></script>
+    <script src="static/js/lib/common/angular-commFn.js"></script>
+    <script src="static/widget/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/js/lib/common/script.js"></script>
+    <script src="static/js/lib/common/superagent.js"></script>
+    <script src="static/js/lib/common/superagent-jsonp.js"></script>
+    <script src="static/js/lib/common/sea.js"></script>
+    <script src="static/js/dialog.js"></script>
+    <script src="src/load.js"></script>
+    <script src="static/js/lib/common/ng-table.js"></script>
+
+    <!--test begin-->
+    <script src="js/jquery/jquery.cookie.js"></script>
+    <style type="text/css" adt="123"></style>
+    <script src="js/uniform.js"></script>
+    <script src="js/uniform/project.resource.js"></script>
+    <script src="js/uniform/common.resource.js"></script>
+    <!--<script src="js/uniform/customer.resource.js"></script>-->
+    <script src="js/uniform/contract.resource.js"></script>
+    <script src="js/uniform/bid.resource.js"></script>
+    <script src="js/uniform/constructionunit.resource.js"></script>
+    <script src="js/uniform/constructionunitcatart.resource.js"></script>
+    <script src="js/uniform/user.resource.js"></script>
+    <!--<script src="js/uniform/tree.org.js"></script>-->
+    <script src="js/fileupload/attachment/jquery.showLoading.min.js"></script>
+    <script src="js/fileupload/attachment/ajaxfileupload.js"></script>
+    <script src="js/fileupload/attachment/upload.file.js"></script>
+    <script src="js/uniform/file.upload.js"></script>
+    <script src="js/uniform/businessType.resource.js"></script>
+    <script src="js/uniform/taxcode.resource.js"></script>
+    <script src="js/uniform/exportPage.resource.js"></script>
+    <script type="text/javascript">var rpPath = 'http://172.16.24.119:8120/rp'</script>
+    <script src="js/uniform/task.tran.task.user.map.dialog.js"></script>
+    <script src="static/widget/My97DatePicker/WdatePicker.js"></script>
+    <!--test end-->
+
+    <style>
+        .a-ul-box {
+            list-style: none;
+        }
+
+        .a-ul-box li {
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--页面头部-->
+<div class="view-top">
+
+</div>
+<!--页面左边栏-->
+<div class="view-left">
+
+</div>
+<!--页面主视图-->
+<div ng-view>
+
+</div>
+
+<ul class="a-ul-box">
+    <li>
+        <a ng-href="?project=bill&module=billDemo&controller=commonPlugin&action=commonPlugin">commonPlugin</a>
+    </li>
+</ul>
+</body>
+</html>
+<script>
+    $(function () {
+        /*页面渲染之前初始化处理逻辑*/
+    });
+</script>

@@ -1,0 +1,54 @@
+.block-table {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.block-con {
+    padding: 10px 5px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #efefef;
+    border-top: 0;
+}
+
+.bt-ef {
+    border-top: 1px solid #efefef;
+}
+
+.table-content {
+    padding: 15px 0 5px;
+    height: auto;
+    overflow: hidden;
+}
+
+.table-detail {
+    margin: auto;
+    width: 100%;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+.table-detail-no {
+    border: 0;
+}
+
+.table-detail-no td {
+    border: 0;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+
+.table-content table tr td {
+    width: 140px;
+}
+
+.td-left{
+    color: #555;
+    font-family: "microsoft yahei";
+    font-weight: normal;
+    font-size: 13px;
+    text-align: right !important;
+    position: relative;
+    top: -2px;
+}

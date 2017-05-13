@@ -13,8 +13,8 @@
     　</div>
     <ul class="nav navbar-nav">
         <li class="active"><a href="http://www.tisson.cn/index">网站首页</a></li>
-        <li><a href="product/productInfoList">API</a></li>
-        <li><a href="login">会员中心</a></li>
+        <li><a href="product/productInfoList.do">API</a></li>
+        <li><a href="login.do">会员中心</a></li>
         <li><a href="##">成功案例</a></li>
         <li><a href="##">关于我们</a></li>
     </ul>

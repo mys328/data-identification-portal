@@ -23,13 +23,18 @@
 
     <!--加载静态资源，*.css,*.js等-->
     <mvc:resources mapping="/resource/**" location="/resource/"/>
+    <mvc:resources mapping="/static/**" location="/static/"/>
+    <mvc:resources mapping="/bower_components/**" location="/bower_components/"/>
+    <mvc:resources mapping="/img/**" location="/img/"/>
+    <mvc:resources mapping="/js/**" location="/js/"/>
+    <mvc:resources mapping="/src/**" location="/src/"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="contentType" value="text/html;charset=UTF-8" />
         <property name="prefix" value="/jsp/"/>
         <property name="suffix" value=".jsp"/>
         <property name="order" value="1" />
-        <property name="contentType" value="text/html;charset=UTF-8" />
     </bean>
 
 </beans>

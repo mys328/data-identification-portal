@@ -1,0 +1,40 @@
+<div>
+    <div class="z-table-block">
+        <table class="z-table z-table-bordered">
+            <thead>
+            <tr class="ng-table-group z-bg-color">
+                <td style="text-align: center !important;" ng-repeat="col in column"
+                    ng-style="{'width': col.width + 'px'}">
+                    {{col.displayName}}
+                </td>
+            </tr>
+            </thead>
+            <tbody ng-class="{true : z-selected-table-body}" class="z-selected-table-body">
+            <tr ng-repeat="c in content" z-id="{{stripHTML(c[matchFiled.id])}}" z-p-id="{{c[matchFiled.pId]}}"
+                ng-if="!c[matchFiled.pId] || ( showChildRow && getPId(this) == openId)" z-data="{{c}}"
+                ng-click="onSelected($event);" class="z-tr">
+                <td style="text-align: center !important;" ng-repeat="filed in c">
+                    <!--<div dy-compile  ng-bind-html="filed | trust">
+                    </div>-->
+                    <dy-compile html="{{filed}}"></dy-compile>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--是否显示分页插件-->
+    <div page-plugin
+         total-page="pageConfig.totalPage"
+         total-count="pageConfig.totalCount"
+         page-size="pageConfig.pageSize"
+         current-page="pageConfig.currentPage"
+         on-select-page="changeCallBackFn(currentPage, pageSize)" ng-if="pagingOptions">
+    </div>
+
+    <!--<div>
+        <h5>绑定数据展示区域</h5>
+        <div style="border:1px solid #000000">
+            {{tableConfig.data}}
+        </div>
+    </div>-->
+</div>

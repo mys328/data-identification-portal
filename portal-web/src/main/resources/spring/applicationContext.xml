@@ -15,13 +15,10 @@
     </context:component-scan>
 
 
-
-
     <!-- 配置文件 -->
     <context:property-placeholder location="classpath:/properties/config.properties" ignore-unresolvable="true"/>
     <!--<import resource="spring-datasources.xml"/>-->
     <import resource="dubbo-consumer.xml"/>
-
 
 
 </beans>

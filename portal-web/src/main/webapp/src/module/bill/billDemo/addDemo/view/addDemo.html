@@ -1,0 +1,133 @@
+<body>
+<form name="contactMgmtForm" id="allMask">
+    <div class="block10"></div>
+    <div class="zt-top">
+        <div class="zt-toolbar">
+            <div class="toolbar">
+                <button class="btn btn-default" type="button" ng-click="submit()"><i class="fa fa-check"></i> 提 交
+                </button>
+                <!-- <button class="btn btn-default"  type="button" id="btnSearch" ng-click="clearItem()"><i class="fa fa-trash-o"></i> 清 空</button> -->
+                <button class="btn btn-default" type="button" id="btnSearch" ng-click="goSearchList()"><i
+                        class="fa fa-chevron-left"></i> 返 回
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="zt-body">
+        <div class="block-table">
+            <div class="block-con bt-ef">
+                <div class="table-content">
+                    <table class="table-detail table-detail-no" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td class="td-left">客商类型：</td>
+                            <td><select class="form-control-select-lg" name="source" ng-model="customerType"
+                                        ng-options="item.itemName as item.itemName for item in customerNameList">
+
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td class="td-left">{{customerType}}名称：</td> -->
+                            <td class="td-left"><em>*</em>客商名称：</td>
+                            <td>
+                                <input type="text" name="subject" class="inputText_lg" ng-model="initProveView.bpName"
+                                       ng-required="true" disabled/><span><a ng-show="customerType == '供应商'"
+                                                                             ng-click="view.showSupplierDialog = true"
+                                                                             class="btn btn-default">选择</a> <a
+                                    ng-show="customerType == '客户'" ng-click="view.showCustomerDialog = true"
+                                    class="btn btn-default">选择</a></span>
+                            </td>
+                            <td class="td-left">客商编码：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.bpCode" class="inputText_lg"
+                                       disabled/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-left"><em class="red">*</em>联系人姓名：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.userName" class="inputText_lg"
+                                       ng-required="true"/>
+                            </td>
+                            <td class="td-left">性别：</td>
+                            <td>
+                                <select ng-model="initProveView.gendar" class="form-control-select-lg">
+                                    <option value="1">男</option>
+                                    <option value="2">女</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">工作部门：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.orgName"
+                                       class="inputText_lg"/>
+                            </td>
+                            <td class="td-left">职务：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.post" class="inputText_lg"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">称谓：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.contactsTitle"
+                                       class="inputText_lg"/>
+                            </td>
+                            <td class="td-left"><em>*</em>重要性：</td>
+                            <td>
+                                <select ng-model="initProveView.importance" class="form-control-select-lg">
+                                    <option ng-repeat="dictitem in view.importances" value="{{dictitem.itemKey}}">
+                                        {{dictitem.itemName}}
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-left"><em>*</em>办公电话：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.fax" class="inputText_lg"
+                                       ng-required="true"/>
+                            </td>
+                            <td class="td-left"><em>*</em>移动电话：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.phone" class="inputText_lg"
+                                       ng-required="true"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">邮箱：</td>
+                            <td>
+                                <input type="text" name="subject" ng-model="initProveView.email" class="inputText_lg"/>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-left">主管业务：</td>
+                            <td colspan="3"><textarea cols="75" rows="8"
+                                                      ng-model="initProveView.ownBusiness"></textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 客商查询 -->
+    <div customer-dialog
+         show-dialog="view.showSupplierDialog"
+         dialog-id="supplier"
+         sourcetype="source_supplier"
+         modal-title="选择供应商"
+         confirm-button="确定"
+         on-selected-confirm="selectSupplier(customer)"></div>
+
+    <div customer-dialog
+         show-dialog="view.showCustomerDialog"
+         dialog-id="customer"
+         sourcetype="source_customer"
+         modal-title="选择客户"
+         confirm-button="确认"
+         on-selected-confirm="selectCustomer(customer)"></div>
+    <div mask visible="showMask" ref-id="#allMask"></div>
+</form>
+</body>
