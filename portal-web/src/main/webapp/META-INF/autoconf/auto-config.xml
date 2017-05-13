@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+    <!-- Dubbo服务IP、Port配置 -->
+    <group name="dubbo">
+        <property name="dubbo.registry.url"       defaultValue="192.168.152.125:2181"   description="dubbo注册中心地址"/>
+        <property name="dubbo.settlecenter.port"  defaultValue="-1"                     description="服务端口"/>
+        <property name="zookeeper.address"        defaultValue="192.168.152.125:2181"   description="客户端端口" />
+        <property name="zookeeper.lockTime"       defaultValue="3"                      description="ZK锁时间" />
+    </group>
+
+    <!--kafka-->
+    <group name="kafka">
+        <property name="kafka.threadCount"        defaultValue="5" description="kafka线程数" />
+        <property name="kafka.clusterAddress"     defaultValue="192.168.152.125:29092,192.168.152.125:29092"
+                  description="kafka集群地址" />
+    </group>
+
+    <!-- Redis服务信息配置 -->
+    <group name="redis">
+        <property name="redis.host"             defaultValue="192.168.152.125"  description="redis服务地址" />
+        <property name="redis.port"             defaultValue="6379"             description="redis服务端口" />
+        <property name="redis.clusterName"      defaultValue="mymaster"         description="redis服务名称"/>
+        <property name="redis.minIdle"          defaultValue="50" />
+        <property name="redis.maxIdle"          defaultValue="200" />
+        <property name="redis.maxTotal"         defaultValue="300" />
+        <property name="redis.testOnBorrow"     defaultValue="true" />
+        <property name="redis.database"         defaultValue="2"/>
+    </group>
+
+    <!-- 数据库配置 -->
+    <group name="database">
+        <property name="jdbc.jdbcUrl"           defaultValue="jdbc:oracle:thin:@localhost:1521:orcl"
+                  description="jdbcUrl"/>
+        <property name="jdbc.jdbcUsername"      defaultValue="identification"   description="username" />
+        <property name="jdbc.jdbcPassword"      defaultValue="identification"    description="password"/>
+    </group>
+
+    <!-- 连接池配置 -->
+    <group name="jdbc">
+        <property name="jdbc.driverClassName"                   defaultValue="oracle.jdbc.driver.OracleDriver" />
+        <property name="jdbc.initialSize"                       defaultValue="20" />
+        <property name="jdbc.minIdle"                           defaultValue="10" />
+        <property name="jdbc.maxIdle"                           defaultValue="100" />
+        <property name="jdbc.maxActive"                         defaultValue="20" />
+        <property name="jdbc.maxWait"                           defaultValue="1000" />
+        <property name="jdbc.testOnBorrow"                      defaultValue="false" />
+        <property name="jdbc.testWhileIdle"                     defaultValue="true" />
+        <property name="jdbc.timeBetweenEvictionRunsMillis"     defaultValue="10000" />
+        <property name="jdbc.numTestsPerEvictionRun"            defaultValue="3" />
+        <property name="jdbc.minEvictableIdleTimeMillis"        defaultValue="300000" />
+    </group>
+    <!-- AutoConfig替换模版配置 -->
+    <script>
+        <generate template="WEB-INF/classes/spring/spring-datasources.xml" charset="UTF-8"/>
+    </script>
+
+</config>
+

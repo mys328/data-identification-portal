@@ -1,0 +1,336 @@
+/***
+commom
+***/
+
+body {
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+}
+
+.loginListCode .getImg {
+    position: absolute;
+    right: 250px;
+    top: 18px;
+    width: 19px;
+    height: 21px;
+    background: -2px -33px no-repeat;
+}
+
+.iconfont {
+    font-family: "juhefont" !important;
+    font-size: 12px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale
+}
+
+#regId {
+    position: absolute;
+    z-index: 0;
+}
+
+#regHeader {
+    padding: 32px 52px 40px;
+    position: relative;
+    z-index: 1;
+    height: 48px;
+    line-height: 48px;
+    background: #fff;
+}
+
+#regHeader .tianxun_logo {
+    display: block;
+    width: 310px;
+    height: 48px;
+    float: left;
+    text-indent: -9999em;
+    background: url(../image/tisson.png) no-repeat;
+}
+
+#regHeader .tianxun_login {
+    float: right;
+    font-size: 14px;
+    color: #666;
+}
+
+#regHeader .tianxun_login a {
+    color: #00aeff;
+    text-decoration: underline;
+}
+
+#regHeader .tianxun_login img {
+    padding-left: 10px;
+}
+
+#regContent {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 0;
+}
+
+#regCircle {
+    position: relative;
+    padding-top: 210px;
+    z-index: 1;
+    display: none;
+    opacity: 0.6;
+    width: 1000px;
+    border-radius: 500px;
+    background: #fff;
+    margin: auto;
+}
+
+#regContent .reg_content {
+    width: 960px;
+    position: relative;
+    display: none;
+}
+
+.reg_desc {
+    float: left;
+    width: 324px;
+    margin-right: 36px;
+    text-align: right;
+}
+
+.reg_desc .reg_desc_big {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #666;
+}
+
+.reg_desc .reg_desc_small {
+    font-size: 16px;
+    text-decoration: underline;
+    color: #00aeff;
+    text-align: right;
+    padding-top: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.reg_input {
+    float: left;
+    width: 600px;
+}
+
+.reg_input .reg_input_para {
+    height: 32px;
+    padding-top: 6px;
+    margin-bottom: 24px;
+    position: relative;
+    font-size: 14px;
+}
+
+/***
+index.html
+***/
+
+#regContent .reg_content #mailForm {
+    display: none;
+}
+
+#regContent .reg_content #mobileForm {
+    display: none;
+}
+
+.reg_input .reg_input_para .reg_border {
+    width: 350px;
+    border: 2px solid #dbdbdb;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 0px;
+    z-index: 2;
+}
+
+.reg_input .reg_input_para .reg_border.hover {
+    border-color: #02c5ff;
+}
+
+.reg_input .reg_input_para .regInput {
+    border: none;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 20px;
+    width: 320px;
+    font-size: 14px;
+    padding-right: 14px;
+    font-weight: lighter;
+    padding-bottom: 15px;
+}
+
+.reg_input .reg_input_para .smsbtn {
+    width: 104px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    background: #00aeff;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    margin-left: 45px;
+}
+
+.reg_input .reg_input_para .smsbtn:hover {
+    background: #00a4f1;
+}
+
+.reg_input .reg_input_para .errorTips {
+    color: #fe5555;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    display: none;
+    padding-left:35px;
+}
+
+.reg_input .reg_input_para .errorTips em {
+    background: #fe5555;
+    text-align: center;
+    padding: 9px 12px;
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: -4px;
+}
+
+.reg_input .reg_input_para .errorTips i {
+    width: 12px;
+    height: 13px;
+}
+
+.reg_input .reg_input_para.code .regInput {
+    width: 200px;
+}
+
+.reg_input .reg_input_para.code .reg_border {
+    width: 230px;
+}
+
+.reg_input .reg_input_para .reg_ckeckbox {
+    color: #909090;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    padding-bottom: 6px;
+}
+
+.reg_input .reg_input_para .reg_ckeckbox a {
+    color: #00aeff;
+    text-decoration: none;
+}
+
+.reg_input .reg_input_para .regBtn {
+    border: none;
+    background: #00aeff;
+    width: 214px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.reg_input .reg_input_para .regBtn:hover {
+    background: #00a4f1;
+}
+
+.checked {
+    display: none;
+    display: inline-block \9;
+}
+
+.checked + label {
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border: 1px solid #00aeff;
+    color: #00aeff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    display: none \9;
+    position: relative;
+    overflow: hidden;
+    top: 4px;
+}
+
+.checked + label:after {
+    content: '\e60e';
+    position: absolute;
+    top: -99px;
+    left: 1px;
+}
+
+.checked:checked + label:after {
+    top: 1px;
+}
+
+/***
+mailSuccess.html
+***/
+
+.success_title {
+    font-size: 16px;
+    color: #666;
+}
+
+.success_title span {
+    font-size: 16px;
+    color: #00aeff;
+}
+
+.success_desc {
+    font-size: 14px;
+    color: #999;
+    padding: 10px 0 36px;
+}
+
+.success_border {
+    border-top: 1px solid #e7e7e7;
+    margin: 40px 0 36px;
+    width: 390px;
+}
+
+.success_fail_title {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+.success_fail_desc {
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+    padding-top: 4px;
+}
+
+.success_fail_desc a {
+    color: #00aeff;
+    text-decoration: underline;
+}
+
+/***
+forget.html
+***/
+
+.forget .reg_input .reg_input_para .regBtn {
+    margin-top: 8px;
+}
+
+/***
+resetPwd.html
+***/
+
+.reset .reg_input .reg_input_para .regBtn {
+    margin-top: 10px;
+}
