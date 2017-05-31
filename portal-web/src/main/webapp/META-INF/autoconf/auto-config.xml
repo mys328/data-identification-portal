@@ -30,7 +30,7 @@
 
     <!-- 数据库配置 -->
     <group name="database">
-        <property name="jdbc.jdbcUrl"           defaultValue="jdbc:oracle:thin:@localhost:1521:orcl"
+        <property name="jdbc.jdbcUrl"           defaultValue="jdbc:oracle:thin:@172.16.26.7:1521:orcl"
                   description="jdbcUrl"/>
         <property name="jdbc.jdbcUsername"      defaultValue="identification"   description="username" />
         <property name="jdbc.jdbcPassword"      defaultValue="identification"    description="password"/>
