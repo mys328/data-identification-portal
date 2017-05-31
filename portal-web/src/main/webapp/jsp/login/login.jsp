@@ -59,7 +59,7 @@
                 <div style="padding-left: 20%;">
                     <button type="submit" class="btn loginBtn">登录</button>
                     <ul style="text-align: right;padding-right: 25%;padding-top: 10px;">还没有天讯账号,<a
-                            href="login/register">立即注册</a></ul>
+                            href="login/register.do">立即注册</a></ul>
                 </div>
 
             </form>

@@ -23,7 +23,7 @@
         <div>天讯首页</div>
     </a>
     <div class="tianxun_login">
-        已有天讯帐号，<a href="/login" target="_blank">直接登录</a><img src="<%=request.getContextPath()%>/resource/image/arrow.png">
+        已有天讯帐号，<a href="/login.do" target="_blank">直接登录</a><img src="<%=request.getContextPath()%>/resource/image/arrow.png">
     </div>
 </div>
 
